@@ -7,6 +7,7 @@ from django.db import models
 class Product(models.Model):
     title = models.CharField(max_length=30)
     description = models.TextField(max_length=50,default="desc")
+    slug = models.SlugField(default='slug-field')# unique=True)
     item_id = models.IntegerField(default=0)
     price = models.DecimalField(default=0,max_digits=4,decimal_places=2)
     sale_price = models.DecimalField(default=0,max_digits=4,decimal_places=2)
